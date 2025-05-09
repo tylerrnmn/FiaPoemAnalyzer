@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Poem Analyzer</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Times New Roman', serif;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    video.background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    #audio-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: #222;
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      z-index: 10;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.6);
+      min-height: 100vh;
+      padding: 30px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .poem-box {
+      width: 40%;
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      white-space: pre-wrap;
+      text-align: left;
+      font-size: 2.4em;
+      line-height: 1.6;
+      overflow-y: auto;
+      max-height: 90vh;
+    }
+
+    .table-section {
+      width: 55%;
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    table {
+      width: 47%;
+      border-collapse: collapse;
+      font-size: 0.9em;
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 4px 6px;
+      text-align: center;
+    }
+
+    th {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 2em;
+    }
+  </style>
+</head>
+<body>
+  <video class="background" autoplay loop muted>
+    <source src="background.mp4" type="video/mp4" />
+  </video>
+
+  <button id="audio-toggle">🔊 Music On/Off</button>
+  <audio id="bg-audio" loop>
+    <source src="background.mp3" type="audio/mp3" />
+  </audio>
+
+  <h1>Poem Analyzer</h1>
+  <div class="overlay">
+    <div class="poem-box">
+      I will hold you
+in my arms
+as I held you in death.
+But know
+I am the Deathbed Companion.
+I lay with the dead
+so that I might grant them another chance at life.
+Such is my duty.
+Such is my
+affection.
+    </div>
+
+    <div class="table-section">
+      <table>
+        <tr><th>Word</th><th>Count</th></tr>
+        
+        <tr><td>i</td><td>5</td></tr>
+        
+        <tr><td>my</td><td>3</td></tr>
+        
+        <tr><td>in</td><td>2</td></tr>
+        
+        <tr><td>you</td><td>2</td></tr>
+        
+        <tr><td>the</td><td>2</td></tr>
+        
+        <tr><td>such</td><td>2</td></tr>
+        
+        <tr><td>is</td><td>2</td></tr>
+        
+        <tr><td>another</td><td>1</td></tr>
+        
+        <tr><td>as</td><td>1</td></tr>
+        
+        <tr><td>so</td><td>1</td></tr>
+        
+        <tr><td>chance</td><td>1</td></tr>
+        
+        <tr><td>at</td><td>1</td></tr>
+        
+        <tr><td>will</td><td>1</td></tr>
+        
+        <tr><td>but</td><td>1</td></tr>
+        
+        <tr><td>them</td><td>1</td></tr>
+        
+        <tr><td>companion</td><td>1</td></tr>
+        
+        <tr><td>dead</td><td>1</td></tr>
+        
+        <tr><td>life</td><td>1</td></tr>
+        
+        <tr><td>deathbed</td><td>1</td></tr>
+        
+        <tr><td>arms</td><td>1</td></tr>
+        
+        <tr><td>might</td><td>1</td></tr>
+        
+        <tr><td>am</td><td>1</td></tr>
+        
+        <tr><td>with</td><td>1</td></tr>
+        
+        <tr><td>duty</td><td>1</td></tr>
+        
+        <tr><td>affection</td><td>1</td></tr>
+        
+        <tr><td>grant</td><td>1</td></tr>
+        
+        <tr><td>hold</td><td>1</td></tr>
+        
+        <tr><td>that</td><td>1</td></tr>
+        
+        <tr><td>death</td><td>1</td></tr>
+        
+        <tr><td>held</td><td>1</td></tr>
+        
+        <tr><td>know</td><td>1</td></tr>
+        
+        <tr><td>lay</td><td>1</td></tr>
+        
+      </table>
+
+      <table>
+        <tr><th>Char</th><th>Count</th></tr>
+        
+        <tr><td>t</td><td>15</td></tr>
+        
+        <tr><td>h</td><td>14</td></tr>
+        
+        <tr><td>a</td><td>14</td></tr>
+        
+        <tr><td>e</td><td>12</td></tr>
+        
+        <tr><td>i</td><td>10</td></tr>
+        
+        <tr><td>n</td><td>9</td></tr>
+        
+        <tr><td>o</td><td>9</td></tr>
+        
+        <tr><td>m</td><td>8</td></tr>
+        
+        <tr><td>y</td><td>7</td></tr>
+        
+        <tr><td>d</td><td>7</td></tr>
+        
+        <tr><td>l</td><td>6</td></tr>
+        
+        <tr><td>u</td><td>6</td></tr>
+        
+        <tr><td>s</td><td>5</td></tr>
+        
+        <tr><td>c</td><td>5</td></tr>
+        
+        <tr><td>.</td><td>5</td></tr>
+        
+        <tr><td>I</td><td>5</td></tr>
+        
+        <tr><td>r</td><td>3</td></tr>
+        
+        <tr><td>w</td><td>3</td></tr>
+        
+        <tr><td>f</td><td>3</td></tr>
+        
+        <tr><td>g</td><td>2</td></tr>
+        
+        <tr><td>S</td><td>2</td></tr>
+        
+        <tr><td>p</td><td>1</td></tr>
+        
+        <tr><td>b</td><td>1</td></tr>
+        
+        <tr><td>D</td><td>1</td></tr>
+        
+        <tr><td>B</td><td>1</td></tr>
+        
+        <tr><td>k</td><td>1</td></tr>
+        
+        <tr><td>C</td><td>1</td></tr>
+        
+      </table>
+    </div>
+  </div>
+
+  <script>
+    const audio = document.getElementById("bg-audio");
+    const button = document.getElementById("audio-toggle");
+    let playing = false;
+
+    button.addEventListener("click", () => {
+      if (playing) {
+        audio.pause();
+        playing = false;
+      } else {
+        audio.play();
+        playing = true;
+      }
+    });
+  </script>
+</body>
+</html>
